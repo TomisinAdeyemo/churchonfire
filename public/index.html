@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="icon" href="/assets/favicon.png"/>
+  <title>Church on Fire International - Cicero, Chicago</title>
+  <meta name="description" content="Join us in Cicero or watch online. Welcome home to Church on Fire International."/>
+  <style>
+    :root {
+      --bg:#0a0a0a;
+      --surface:#111318;
+      --surface-alt:#0b3a6f;
+      --text:#ffffff;
+      --muted:#cfd8e3;
+      --border:#263041;
+      --primary:#0b3a6f;
+      --accent:#b48a2c;
+      --success:#22c55e;
+      --danger:#ef4444;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius-lg:18px;
+      --radius-md:12px;
+      --radius-sm:8px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    img { max-width:100%; height:auto; display:block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; }
+    .utility-header {
+      height: 56px;
+      background: rgba(0,0,0,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: saturate(1.2) blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .utility-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .brand img { height: 32px; }
+    .utility-icons { display: flex; gap: 4px; }
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s;
+    }
+    .icon-btn:hover { background: rgba(255,255,255,0.08); }
+    .icon-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .hero {
+      position: relative;
+      min-height: 62vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .eyebrow {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .hero .sub {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="utility-header" data-section="header">
+    <div class="container">
+      <a class="brand" href="#" aria-label="Church on Fire International Home">
+        <img data-id="brand.logo" alt="Church on Fire International logo"/>
+      </a>
+      <nav class="utility-icons" aria-label="Utility Navigation">
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" data-section="hero" aria-label="Welcome">
+      <div class="hero-media">
+        <img data-id="hero.bg_image" alt="Campaign image" loading="eager"/>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow" data-id="hero.eyebrow"></p>
+        <h1 data-id="hero.title"></h1>
+        <p class="sub" data-id="hero.subtitle"></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" data-id="hero.primaryCTA"></a>
+          <a class="btn btn-outline" data-id="hero.secondaryCTA"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-card container" data-section="welcome" aria-labelledby="welcome-heading">
+      <div class="welcome-media">
+        <img data-id="welcomePastors.image" alt="Welcome photo" loading="lazy"/>
+      </div>
+      <div class="welcome-copy">
+        <h2 id="welcome-heading" data-id="welcomePastors.title"></h2>
+        <p data-id="welcomePastors.body"></p>
+        <div class="stack-ctas" data-id="welcomePastors.ctas"></div>
+      </div>
+    </section>
+
+    <section class="leader-strip" data-section="leader-strip" aria-labelledby="leader-heading">
+      <div class="container strip-inner">
+        <div class="strip-content">
+          <h2 id="leader-heading" data-id="featuredLeaderStrip.title"></h2>
+          <p data-id="featuredLeaderStrip.subtext"></p>
+        </div>
+        <div class="row-ctas" data-id="featuredLeaderStrip.ctas"></div>
+      </div>
+    </section>
+
+    <section class="service-times container" data-section="service-times" aria-labelledby="service-times-heading">
+      <div class="panel">
+        <div class="panel-head">
+          <h3 id="service-times-heading" data-id="serviceTimesPanel.heading"></h3>
+          <a class="pill-link" data-id="serviceTimesPanel.viewAll"></a>
+        </div>
+        <ul class="times-list" data-id="serviceTimesPanel.items"></ul>
+      </div>
+    </section>
+
+    <section class="whats-happening container" data-section="happening" aria-labelledby="happening-heading">
+      <h3 id="happening-heading" data-id="whatsHappening.heading"></h3>
+      <div class="cards" data-id="whatsHappening.cards"></div>
+    </section>
+
+    <section class="featured-message container" data-section="featured-message" aria-labelledby="message-heading">
+      <div class="msg-media">
+        <img data-id="featuredMessage.image" alt="Featured message" loading="lazy"/>
+      </div>
+      <div class="msg-copy">
+        <h3 id="message-heading" data-id="featuredMessage.title"></h3>
+        <p class="muted" data-id="featuredMessage.date"></p>
+        <div class="stack-ctas">
+          <a class="btn btn-outline" data-id="featuredMessage.primaryCTA"></a>
+          <a class="btn btn-outline" data-id="featuredMessage.secondaryCTA"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="campaign-card container" data-section="campaign-repeat" aria-label="Campaign highlight">
+      <article class="card-large" data-id="campaign.card"></article>
+    </section>
+
+    <section class="newsletter container" data-section="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter-content">
+        <h3 id="newsletter-heading" data-id="newsletter.heading"></h3>
+        <p class="muted" data-id="newsletter.subcopy"></p>
+        <form id="newsletterForm" novalidate>
+          <div class="grid-3" data-id="newsletter.fields"></div>
+          <button class="btn btn-outline" data-id="newsletter.submitLabel" type="submit"></button>
+        </form>
+        <div id="nl-status" role="status" aria-live="polite" aria-atomic="true"></div>
+      </div>
+    </section>
+
+    <section class="app-band" data-section="app" aria-labelledby="app-heading">
+      <div class="container app-inner">
+        <div class="app-copy">
+          <h3 id="app-heading" data-id="appPromo.heading"></h3>
+          <p data-id="appPromo.subcopy"></p>
+          <div class="store-row" data-id="appPromo.stores"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-section="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-brand">
+        <img data-id="footer.logo" alt="Logo"/>
+      </div>
+      <div class="footer-groups" data-id="footer.groups"></div>
+      <div class="legal muted" data-id="footer.legal"></div>
+    </div>
+  </footer>
+
+  <aside class="live-ticker" data-section="ticker" aria-live="polite" aria-atomic="true">
+    <div class="container ticker-content">
+      <span class="prefix" data-id="liveTicker.prefix"></span>
+      <span id="countdown" class="countdown">00:00:00:00</span>
+    </div>
+  </aside>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
