@@ -972,6 +972,7 @@
     grid-template-columns: 1fr;
     gap: 32px;
     margin: 64px auto;
+    height: 650px;
   }
 
   .msg-copy h3 {
@@ -1503,7 +1504,7 @@
 }
 
 .hero-icon {
-  color: var(--primary);
+  color: white;
   margin-bottom: 24px;
 }
 
@@ -1731,6 +1732,9 @@
   background: var(--surface);
   border-radius: var(--radius-lg);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all children horizontally */
 }
 
 .quick-give-card h2 {
@@ -1740,9 +1744,11 @@
 
 .amount-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   gap: 12px;
   margin: 32px 0;
+  justify-content: center;
+  width: fit-content;
 }
 
 .amount-btn {
